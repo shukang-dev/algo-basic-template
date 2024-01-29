@@ -41,7 +41,29 @@ public class BinarySearch {
         return l;
     }
 
+    /**
+     * 浮点二分
+     */
+    public static double binarySearch3(double l, double r) {
+        final double eps = 1e-6; // 精度，取决于题目要求
+        while (r-l > eps) {
+            double mid = (l+r)/2;
+            if (check(mid)) {
+                r = mid;
+            } else {
+                l = mid;
+            }
+        }
+        return l;
+    }
+
+
     public static boolean check(int mid) {
+        // 判断逻辑，判断 mid 是否满足性质
+        return true;
+    }
+
+    public static boolean check(double mid) {
         // 判断逻辑，判断 mid 是否满足性质
         return true;
     }
